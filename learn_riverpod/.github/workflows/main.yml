@@ -1,7 +1,8 @@
 name: Flutter tests
 on:
   pull_request:
-
+    branches:
+      - '**'
 jobs:
   flutter_test:
     name: Run flutter tests and analyze
