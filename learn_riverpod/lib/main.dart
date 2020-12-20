@@ -47,6 +47,7 @@ class MyHomePage extends StatelessWidget {
         children: pages.entries
             .map(
               (entry) => RaisedButton(
+                key: ValueKey(entry.key),
                 child: Text(entry.key),
                 onPressed: () {
                   Navigator.of(context).push(
