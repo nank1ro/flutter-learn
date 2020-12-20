@@ -15,7 +15,7 @@ void main() {
   testWidgets('''
   Given user in home page
   When [numberProvider] is pressed
-  Then the 11 value is displayed
+  Then the value 11 is displayed
   ''', (tester) async {
     // ASSEMBLE
     await tester.pumpWidget(
