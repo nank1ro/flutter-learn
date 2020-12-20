@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -26,11 +24,12 @@ class NumbersStateNotifierProvider extends StatelessWidget {
       body: Center(
         child: Consumer(
           builder: (context, watch, child) {
-            final number = watch(numbersNotifierProvider.state);
+            final numbers = watch(numbersNotifierProvider.state);
             return ListView.builder(
-              itemCount: number.length,
+              key: ValueKey('listView'),
+              itemCount: numbers.length,
               itemBuilder: (BuildContext context, int index) {
-                return Text(number[index].toString());
+                return Text(numbers[index].toString());
               },
             );
           },
@@ -40,7 +39,7 @@ class NumbersStateNotifierProvider extends StatelessWidget {
         child: Icon(Icons.add),
         onPressed: () {
           /// Used to increment the value of the number and to see changes.
-          context.read(numbersNotifierProvider).add(Random().nextInt(100));
+          context.read(numbersNotifierProvider).add(1);
         },
       ),
     );

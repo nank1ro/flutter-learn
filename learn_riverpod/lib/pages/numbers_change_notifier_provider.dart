@@ -1,6 +1,4 @@
 import 'dart:collection';
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -48,9 +46,7 @@ class NumbersChangeNotifierProvider extends StatelessWidget {
         child: Icon(Icons.add),
         onPressed: () {
           /// Used to increment the value of the number and to see changes.
-          context
-              .read(numbersChangeNotifierProvider)
-              .add(Random().nextInt(100));
+          context.read(numbersChangeNotifierProvider).add(2);
         },
       ),
     );
