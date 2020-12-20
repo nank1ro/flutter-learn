@@ -1,4 +1,4 @@
-name: Flutter tests
+name: Riverpod flutter tests
 on:
   pull_request:
     branches:
